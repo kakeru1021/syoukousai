@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>お問い合わせフォーム</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    header{
+      background: #a2daff;
+      color: black;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #3366cc;
+      font-weight: bold;
+    }
+
+    main{
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+    }
+
+    h1,h2{
+      color: #000000;
+    }
+
+    .box{
+      background:#FFFFFF
+    }
+
+    form{
+      background: #FFFFFF;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #3366cc;
+      color: white;
+      border: none;
+      padding: 0.6em 1.2em;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #254e9e;
+    }
+
+    footer{
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 2em;
+      padding: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>2025年度 島根職業能力開発短期大学校文化祭</h1>
+    <nav>
+      <ul>
+        <a href="index.html">HOME</a>
+        <a href="accsess.html">アクセス</a>
+        <a href="form.html">お問い合わせ</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form action="https://formsubmit.co/shimane.ziti@gmail.com" method="POST">
+      <h2>お問い合わせフォーム</h2>
+
+      <label>お名前:</label>
+      <input id="name" type="text" name="name" required>
+
+      <label>メールアドレス:</label>
+      <input type="email" name="email" required>
+
+      <label>お問い合わせ内容:</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <!--スパム対策-->
+      <input type = "text" name = "_honey" style = "display:none">
+
+      <!--自動返信-->
+      <input type = "hidden" name = "_autoresponse" value = "お問い合わせありがとうございます。">
+      
+      <!--送信後リダイレクト-->
+      <input type = "hidden" name = "_next" value = "https://yourdomain.com/thanks.html">
+      
+      <!--CAPTCHA有効化-->
+      <input type = "hidden" name = "_captcha" value = "true">
+
+      <button type="submit">送信</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 島根職業能力開発短期大学校 自治会</p>
+  </footer>
+</body>
+</html>
